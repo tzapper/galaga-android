@@ -27,6 +27,9 @@ jobs:
       - name: Install npm dependencies
         run: npm install
         
+       - name: Sync Capacitor Android project
+        run: npx cap sync android
+        
       - name: Build debug APK
         working-directory: android
         run: ./gradlew assembleDebug --stacktrace
